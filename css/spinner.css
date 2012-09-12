@@ -1,0 +1,39 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333;
+}
+
+.spinner {
+    display: inline-block;
+    padding: 0 34px;
+    position: relative;
+}
+.spinner input {
+    display: none;
+}
+.spinner-value {
+    background-color: #222;
+    color: white;
+    display: block;
+    height: 34px;
+    line-height: 34px;
+    padding: 0 5px;
+    min-width: 50px;
+    text-align: center;
+}
+.spinner-button {
+    background-color: #6AA44B;
+    color: white;
+    position: absolute;
+    top: 0;
+    height: 34px;
+    width: 34px;
+    text-align: center;
+    line-height: 34px;
+    font-size: 11px;
+}
+
+.spinner-up { right: 0; }
+.spinner-down { left: 0; }

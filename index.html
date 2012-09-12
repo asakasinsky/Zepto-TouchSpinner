@@ -1,0 +1,41 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>DateLine</title>
+    <link rel="stylesheet" href="css/spinner.css">
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no,width=device-width">
+</head>
+<body>
+    <div>
+        <h2>Number</h2>
+        <input type="text" id="spinner" name="spinner" value="1">
+    </div>
+    <div>
+        <h2>Time</h2>
+        <input type="text" id="time-spinner" name="time-spinner" value="12:35" style="width:300">
+    </div>
+    <script src="js/zepto.min.js"></script>
+    <script src="js/globalize.js"></script>
+    <script src="js/globalize.de.js"></script>
+    <script src="js/spinner.js"></script>
+    <script>
+        (function($) {
+            var $spinner = $('#spinner'),
+                $timeSpinner = $('#time-spinner');
+
+            Globalize.culture('de-DE');
+
+            $spinner.Spinner({
+                min: 1,
+                max: 10
+            });
+            $timeSpinner.TimeSpinner({
+                minutesStep: 10,
+                min: '12:00',
+                max: '18:00'
+            });
+
+        }(Zepto));
+    </script>
+</body>
+</html>
